@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* font-family: 'Bebas Neue', cursive;*/
+@font-face {
+    font-family: 'idroid';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+
+    --cor0: #C5ebd6;
+    --cor01: #83E1AD;
+    --cor02: #3ddC84;
+    --cor03: #2FA866;
+    --cor04: #2A5C37;
+    --cor05: #063d1e;
+    --font-padrao: Arial, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-idroid: 'idroid', sans-serif;
+}
+
+* {
+
+    margin: 0px;
+    margin: 0px;
+}
+
+body{
+
+    background-color: var(--cor01);
+}
+
+a.externo::after{
+    
+    content: '\00A0\1F517'
+
+}
+
+
+header {
+
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor03), var(--cor05));   
+    padding-top: 40px;
+    min-height: 130px;
+    
+}
+
+header > h1 {
+
+    font-family: var(--font-destaque);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    margin-bottom: 15px;
+    
+        
+}
+
+header > p {
+    
+    font-family: var(--font-padrao);
+    color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+    font-size: 1em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    
+}  
+
+nav{
+
+    font-family: var(--font-padrao);
+    font-size: 15px;
+    font-weight: 500;   
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.397);
+    
+}
+
+nav > a{
+
+    color: white; 
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 1s;
+    /* Duração de segundos ao passar o mouse pelo ícone do menu */
+}
+
+nav > a:hover{
+
+    background-color: var(--cor03);
+    color: var(--cor05);
+}
+
+main{
+    
+    margin: auto;
+    background-color: white;
+    margin-bottom: 30px;
+    /* margin-bottom - separa o main do rodapé criando um espaço */
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* boder-radius resultaria no arredondamento na borda dos 4 cantos, sendo que no exemplo está apenas em baixo */
+    
+}
+
+main img{
+
+    width: 100%;
+}
+
+main img.pequena{
+  /* A img do boneco não tem a versão pequena;
+     Necessário criar um display:block pois as imagens não são blocos igual <p><h1>... para ajustar ela no centro com o tamanho menor */
+    max-width: 350px; /* imagam tem 400px de tamanho original ao ampliar a pág. ela ficou com qualidade ruim, por isso ajustar o tamanho máximo */
+    display: block;
+    margin: auto;
+}
+
+main h1{
+        
+    font-family: var(--font-idroid);
+    color: var(--cor05);
+
+}
+
+main h2{
+
+    background-image: linear-gradient(to right, var(--cor0), white);
+    font-family: var(--font-idroid);
+    font-size: 1.3em;
+    color: var(--cor04);
+    text-indent: 8px;
+    font-weight: normal;
+    
+
+}
+
+main p{ 
+
+    margin: 15px 0px 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /* Espaço do Paragráfo */
+    line-height: 2em; /* Espaçamento entre as linhas */
+    
+}
+
+main strong {
+
+    color: var(--cor04);
+    font-weight: 900;
+    
+}
+
+main > article a{
+
+    background-color: var(--cor01);
+    color: var(--cor03);
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 2px 6px;
+    
+}
+
+main > article a:hover {
+
+    background-color: var(--cor05);
+    color: var(--cor03);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+div.video{
+
+    background-color: var(--cor05);
+    margin: 0px -20px 30px -20px;    
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+
+}
+
+div.video > iframe {
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+
+    background-color: var(--cor01);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.527);
+
+}
+
+aside > h3 {
+     background-color: var(--cor04);
+     color: white;
+     font-weight: normal;
+    padding: 10px;
+     margin: -10px -10px 0px -10px;
+     border-radius: 10px 10px 0px 0px;
+    
+}
+
+
+aside > ul {
+
+    list-style-type: '\2714\00A0\00A0'; /* O código 2714 do sinal de verificado foi encontro no site Emojipedia */
+
+    /*00A0\00A0 é o espaçamento sem quebra de linhas*/
+
+    columns: 2;
+}
+
+main > aside a {
+        background-color: var(--cor01);
+        color: var(--cor03);
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 2px 6px;        
+    }
+    
+    main > aside a:hover {    
+        background-color: var(--cor05);
+        color: var(--cor03);
+        border-radius: 5px;
+        transition-duration: 0.5s;    
+}
+
+aside > ul a {
+
+        color: black;
+}
+
+footer{
+
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
